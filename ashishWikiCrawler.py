@@ -54,6 +54,7 @@ def recursiveCrawler(url, depth, search, processed, isFocused, file):
                         res = requests.get(url)
                         contents = res.text
                         # Using BeautifulSoup4 for HTML parsing.
+                        # It reads all the contents throough html parser and stores in soup object.
                         soup = BeautifulSoup(contents,"html.parser")
                         allUrlCount += 1
                 except:
